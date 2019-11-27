@@ -1,7 +1,19 @@
-# Magisk Installer
+# Magisk Yota TTL Fix
 
-**Update `README.md` if you want to submit your module to the online repo!**
+Magisk module for auto set TTL to *63*. Using for bypass tethering detection in Yota mobile operator
 
-For more information about how to use this module installer, please refer to [documentations](https://topjohnwu.github.io/Magisk/guides.html)
+# Installation
 
-If you are not familiar with the Markdown syntax, you can start by experimenting on GitHub's online Markdown editor, which will let you preview before publishing. If you need more help, the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) will be handy.
+1. Download zip archive from [releases](https://github.com/LionZXY/Yota-TTL-Fix/releases/) to phone
+2. Open Magisk application -> Modules and select .zip 
+3. Reboot phone
+
+# What it do
+
+On startup execute two command:
+```
+echo 63 > /proc/sys/net/ipv4/ip_default_ttl
+```
+```
+iptables -t mangle -A POSTROUTING -j TTL --ttl-set 63
+```
