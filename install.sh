@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ##########################################################################################
 #
 # Magisk Module Installer Script
@@ -31,7 +32,7 @@ PROPFILE=false
 POSTFSDATA=false
 
 # Set to true if you need late_start service script
-LATESTARTSERVICE=false
+LATESTARTSERVICE=true
 
 ##########################################################################################
 # Replace list
@@ -43,10 +44,6 @@ LATESTARTSERVICE=false
 # Construct your list in the following format
 # This is an example
 REPLACE_EXAMPLE="
-/system/app/Youtube
-/system/priv-app/SystemUI
-/system/priv-app/Settings
-/system/framework
 "
 
 # Construct your own list here
@@ -123,7 +120,7 @@ REPLACE="
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "     Magisk Yota TTL Fix       "
   ui_print "*******************************"
 }
 

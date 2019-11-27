@@ -1,6 +1,7 @@
-id=template
-name=Template Module
+id=yotattlfix
+name=Yota TTL Fix
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=lionzxy
+description=Change TTL on startup to 63
+minMagisk=17000
